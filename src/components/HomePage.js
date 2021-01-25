@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Navbar } from './index';
 class HomePage extends Component {
     render() { 
         return ( 
-            <Link to='/CampusPage'>See all campuses</Link>
+            <div>
+                <Navbar />
+                <h1>HomePage here</h1>            
+            </div>
+
          );
     }
 }
