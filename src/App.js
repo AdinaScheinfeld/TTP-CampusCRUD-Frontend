@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
 
-import CampusCard from './components/CampusCard';
+import CampusPage from './components/CampusPage';
 
 function App() {
   return (
     <div className="App">
-      <CampusCard />
+      <CampusPage />
     </div>
   );
 }

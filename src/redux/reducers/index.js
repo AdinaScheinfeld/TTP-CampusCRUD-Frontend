@@ -16,7 +16,7 @@ const gotAllCampuses = (data) => {
 export const getAllCampuses = () => {
     return async (dispatch) => {
         try {
-            const response = await axios.get('http://localhost:8080/api/campuses/1')
+            const response = await axios.get('http://localhost:8080/api/campuses')
             console.log("response:", response);
             dispatch(gotAllCampuses(response.data));
         }
