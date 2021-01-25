@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { CampusCard, IsLoading } from './index';
 
 import { connect } from 'react-redux';
@@ -11,10 +12,10 @@ class CampusPage extends Component {
     }
 
     render() {
-        console.log(Array.isArray(this.props.allCampuses.campuses));
         return (
             this.props.allCampuses.campuses != undefined ? (
             <div>
+                <Link to='./AddCampus'>Add Campus</Link>
                 { this.props.allCampuses.campuses.map((item, index) => (
                     <CampusCard 
                         key={ index } 
