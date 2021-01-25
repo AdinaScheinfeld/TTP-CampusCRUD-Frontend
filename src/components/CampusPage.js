@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { CampusCard, IsLoading } from './index';
+import { CampusCard, Navbar, IsLoading } from './index';
 
 import { connect } from 'react-redux';
 import { getAllCampuses } from '../redux/reducers';
@@ -15,6 +15,7 @@ class CampusPage extends Component {
         return (
             this.props.allCampuses.campuses != undefined ? (
             <div>
+                <Navbar />
                 <Link to='./AddCampus'>Add Campus</Link>
                 { this.props.allCampuses.campuses.map((item, index) => (
                     <CampusCard 
